@@ -1,0 +1,76 @@
+{
+    "name": "inertia-volt/laravel",
+    "description": "A Laravel plugin for handling full-stack components powered by Inertia.JS",
+    "license": "MIT",
+    "version": "0.1.0-alpha",
+    "keywords": [
+        "inertia",
+        "volt",
+        "laravel"
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "InertiaVolt\\Laravel\\": "src/"
+        },
+        "files": [
+            "./src/actions.php",
+            "./src/helpers.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Alex Goncharov",
+            "email": "eins.two@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "illuminate/contracts": "^11.0",
+        "illuminate/support": "^11.0",
+        "illuminate/routing": "^11.0",
+        "illuminate/http": "^11.0",
+        "illuminate/view": "^11.0",
+        "inertiajs/inertia-laravel": "^1.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "InertiaVolt\\Laravel\\ServiceProvider"
+            ]
+        }
+    },
+    "require-dev": {
+        "laravel/pint": "^1.17",
+        "phpstan/phpstan": "^1.12",
+        "phpunit/phpunit": "^11.3",
+        "orchestra/testbench": "^9.4"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "InertiaVolt\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "@clear",
+            "@prepare"
+        ],
+        "clear": "@php vendor/bin/testbench package:purge-skeleton --ansi",
+        "prepare": "@php vendor/bin/testbench package:discover --ansi",
+        "build": "@php vendor/bin/testbench workbench:build --ansi",
+        "serve": [
+            "Composer\\Config::disableProcessTimeout",
+            "@build",
+            "@php vendor/bin/testbench serve --ansi"
+        ],
+        "lint": [
+            "@php vendor/bin/pint --ansi",
+            "@php vendor/bin/phpstan analyse --verbose --ansi"
+        ],
+        "test": [
+            "@php vendor/bin/phpunit"
+        ]
+    }
+}
