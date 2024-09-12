@@ -1,0 +1,7 @@
+/.phpunit.cache export-ignore
+/vendor export-ignore
+/playgrounds export-ignore
+/tests export-ignore
+pint.json export-ignore
+phpunit.xml export-ignore
+composer.lock export-ignore
