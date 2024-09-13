@@ -1,5 +1,5 @@
 {
-    "name": "inertia-volt/laravel",
+    "name": "inertia-volt/laravel-plugin",
     "description": "A Laravel plugin for handling full-stack components powered by Inertia.JS",
     "license": "MIT",
     "version": "0.1.0-alpha",
