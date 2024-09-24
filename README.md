@@ -30,10 +30,16 @@ defineProps<{ name: string }();
 
 ### Installation
 
+In your `composer.json` file, set the minimum stability to `dev` by changing the following line:
+
+```
+"minimum-stability": "dev"
+```
+
 Install the Laravel plugin. The service provider and default configuration are registered automatically:
 
 ```
-composer require inertia-volt/laravel
+composer require inertia-volt/laravel-plugin
 ```
 
 Next, install the Vite plugin

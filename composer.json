@@ -2,7 +2,7 @@
     "name": "inertia-volt/laravel-plugin",
     "description": "A Laravel plugin for handling full-stack components powered by Inertia.JS",
     "license": "MIT",
-    "version": "0.1.0-alpha",
+    "version": "0.2.0-alpha",
     "keywords": [
         "inertia",
         "volt",
